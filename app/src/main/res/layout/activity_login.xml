@@ -50,7 +50,8 @@
                 android:layout_gravity="center"
                 android:drawableStart="@drawable/ic_baseline_https_24"
                 android:drawableLeft="@drawable/ic_baseline_https_24"
-                android:hint="비밀번호" />
+                android:hint="비밀번호"
+                android:inputType="textPassword" />
 
             <Button
                 android:id="@+id/btn_login"

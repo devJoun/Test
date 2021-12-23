@@ -16,7 +16,7 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class activity__register extends AppCompatActivity {
+public class activity_register extends AppCompatActivity {
     private EditText et_id,et_pass,et_name,et_age;
     private Button btn_register;
 
@@ -48,7 +48,7 @@ public class activity__register extends AppCompatActivity {
                             boolean success=jsonObject.getBoolean("success");
                             if(success){
                                 Toast.makeText(getApplicationContext(),"등록성공",Toast.LENGTH_SHORT).show();
-                                Intent intent =new Intent(activity__register.this,activity_login.class);
+                                Intent intent =new Intent(activity_register.this,activity_login.class);
                                 startActivity(intent);
                             }else {
                                 Toast.makeText(getApplicationContext(),"등록에 실패 하였습니다",Toast.LENGTH_SHORT).show();
@@ -64,7 +64,7 @@ public class activity__register extends AppCompatActivity {
 
                 RegisterRequest registerRequest=new RegisterRequest(userID,userPass,userName,userAge,reStringListener);
 
-                RequestQueue queue= Volley.newRequestQueue(activity__register.this);
+                RequestQueue queue= Volley.newRequestQueue(activity_register.this);
                 queue.add(registerRequest);
 
             }
